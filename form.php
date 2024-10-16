@@ -7,38 +7,32 @@
 </head>
 
 <body>
-    <!-- tag pembuka form -->
-     <!-- jika method nya post baris 28 harus sama -->
-    <!-- perbedaan post dan get adalah get menampilkan nama di url sedangkan post tidak -->
-    <!-- form action berfungsi seperti a href -->
    <form action="form_action.php" method="post">
-    <!-- action dan method di sebut aribut -->
-    <!-- sedangkan yang berwarna oren di sebut value -->
         <label for="">Username : </label>
-        <!-- name = $ username adalah nama  variabel -->
-        <!-- sedangkan placeholder untuk memberi nama di dalam inputan -->
         <input type="text" name="username" placeholder="Username">
+        <br>
+        <label for="">Password : </label>
+        <input type="password "name="password" placeholder="Username">
+        <br>
+        <label for="">Jenis kelamin : </label>
+        <br>
+        <label for=""><input type="radio" name="jenis_kelamin" value="laki-laki">Laki-laki</label>
+        <br>
+        <label for=""><input type="radio" name="jenis_kelamin" value="perempuan">Perepuan</label>
+        <label for="">Agama: </label>
+        <select name="agama" id="agama">
+            <option value="">Pilih Agama</option>
+            <option value="islam">Islam</option>
+            <option value="kristen">Kristem</option>
+            <option value="hindu">Hindu</option>
+            <option value="buddha">Buddha</option>
+            <option value="konghucu">Konghucu</option>
+        </select>
+        <br>
+        <br>
         <button type="submit" name="kirim">Kirim</button>
 
    </form> 
-   <!-- tag penutup form -->
-    <?php
-
-if (isset($_POST['kirim'])) {
-    
-    if (empty($_POST['username'])) {
-        echo 'input tidak boleh kosong';
-   }else {
-    $username = $_POST['username'];
-
-    echo "username adalah : " . $username;
-
- } 
-
-}
-
-
-?>
 </body>
 
 </html>
